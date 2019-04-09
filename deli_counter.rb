@@ -1,10 +1,10 @@
 katz_deli = [] 
+$last_position = 0
 
-def take_a_number(array, name)
-  array.push(name)
-  position = array.index(name)
-  puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
-  return name, position 
+def take_a_number(array)
+  $last_position +=1
+  array << $last_position
+  puts "Welcome. You are number #{array.last}."
 end 
 
 take_a_number(katz_deli, "Grace")
